@@ -1,27 +1,29 @@
-import React from 'react'
-import Input from '../components/input'
-import Select from '../components/selesct'
-import Textarea from '../components/textarea/textarea'
-import Button from '../components/Button'
-import { useState } from 'react'
+import React, { useState } from 'react';
+import Input from '../components/input';
+import Select from '../components/selesct';
+import Textarea from '../components/textarea/textarea';
+import Button from '../components/Button';
+
 export default function main() {
   const [company, setCompany] = useState('');
   const [email, setEmail] = useState('');
-  // const [number, setNumber] = useState('');
   const [place, setPlace] = useState('');
-  const [comment, setComment] = useState('')
+  const [comment, setComment] = useState('');
+
 
   function handleClick() {
     if (company && email && place && comment) {
-      alert('Registration successful!');
-      setComment('')
-      setEmail('')
-      setPlace('')
-      setCompany('')
+      alert('Registratsiyadan otdi');
+      setComment('');
+      setEmail('');
+      setPlace('');
+      setCompany('');
+     
     } else {
-      alert('Please fill in all the required fields.');
+      alert('Registratsiyadan otmadi');
     }
   }
+
   return (
     <main className="main-wrapper">
        <h2>Komponiya ma'lumotlari</h2>
